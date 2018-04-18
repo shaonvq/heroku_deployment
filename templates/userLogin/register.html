@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "./base.html" %}
+{% block body_block %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ userfrm.as_p }}
+        {{ profilefrm.as_p }}
+        <input type="submit" value="submit">
+    </form>
+
+    {% if errors %}
+        {{errors}}
+    {% endif %}
+{% endblock %}

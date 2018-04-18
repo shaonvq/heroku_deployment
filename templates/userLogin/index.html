@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "./base.html" %}
+{% block body_block %}
+    {% load staticfiles %}        
+    {% if user.is_authenticated %}
+        <img src="{% static 'wallpaper.png' %}" alt="">
+    {% else %}
+
+    {% endif %}
+{% endblock %}

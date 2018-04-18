@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>get body blocked</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    {% else %}
+        <a href="{% url 'userLogin:register' %}">register</a>
+        <a href="{% url 'userLogin:login' %}">login</a>
+    {% endif %}
+    {% block body_block %}
+
+    {% endblock %}
+</body>
+</html>
